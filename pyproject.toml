@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "meter-medallion"
+version = "0.1.0"
+description = "Bronze, silver and gold SQL pipeline for water-meter data, with Dataform-style assertions and a personal-data-free dataset for AI tools"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Hassan Abdullah"}]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools]
+packages = ["meter_medallion"]
+
+[tool.setuptools.package-data]
+meter_medallion = ["models/*/*.sql"]
